@@ -1,5 +1,5 @@
 .body {
-    height: 200vh;
+    line-height: 200vh;
 }
 
 .header {}
@@ -7,11 +7,11 @@
 .header .inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     max-width: 1170px;
     margin: 0 auto;
 
     height: 80px;
-    align-items: center;
 }
 
 .header .gnb>ul {
@@ -21,14 +21,11 @@
 
 .header .gnb>ul>li {
     position: relative;
-
 }
 
-.header .gnb>ul>li>a {
+.header .gnb>ul>li a {
     display: block;
     line-height: 80px;
-    border-top: 1px solid #ddd;
-    text-align: center;
 }
 
 .header .gnb>ul>li ul {
@@ -37,8 +34,8 @@
     border-top: 2px solid #333;
 
     position: absolute;
-    left: 50%;
     top: 72px;
+    left: 50%;
     z-index: 2;
 
     transform: translate(-50%, 0);
@@ -56,7 +53,6 @@
     line-height: 40px;
     border-top: 1px solid #ddd;
     text-align: center;
-
 }
 
 .header .btn {
@@ -78,7 +74,6 @@
     right: 4px;
     top: 8px;
     height: 2px;
-
     background: #333;
 }
 
@@ -89,7 +84,6 @@
     right: 4px;
     bottom: 8px;
     height: 2px;
-
     background: #333;
 }
 
@@ -100,7 +94,6 @@
     right: 4px;
     top: 15px;
     height: 2px;
-
     background: #333;
 }
 
@@ -111,7 +104,6 @@
     right: 4px;
     top: 15px;
     height: 2px;
-
     background: #333;
 }
 
@@ -119,11 +111,21 @@
     font-size: 0;
 }
 
-
 .main_visual {
     position: relative;
     height: 640px;
-    background: url(../images/main_visual01.jpg) no-repeat center center/cover;
+    background: url(../images/main_visual03.jpg)no-repeat center center/cover;
+}
+
+.main_visual::after {
+    content: "";
+    background: #000;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .main_visual .slg {
@@ -145,21 +147,40 @@
     margin-bottom: 8px;
 }
 
-.main_visual::after {
-    content: "";
-    background: #000;
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
 .main_visual .slg p {
     font-size: 16px;
     font-weight: 400;
     color: #ffffff;
+
+}
+
+.main_content {}
+
+.main_content .inner {
+    display: flex;
+    gap: 30px;
+}
+
+.main_content .inner .img_box img {
+    object-fit: cover;
+    height: 400px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+#footer {
+    background: #333333;
+
+    padding: 56px 0;
+    border-top: 1px solid #ddd;
+}
+
+#footer .inner {
+    color: #ffffff;
+}
+
+#footer .address {
+    margin-bottom: 8px;
 }
 
 .popup {
@@ -174,8 +195,7 @@
 
 .popup img {
     width: 100%;
-    height: 600px;
-    object-fit: cover;
+
 }
 
 .popup button {
